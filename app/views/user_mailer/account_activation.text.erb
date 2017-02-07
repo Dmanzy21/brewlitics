@@ -1,5 +1,7 @@
 Hi <%= @user.name %>,
 
-Thank you for joining our followers. We will be sure to keep you up to date on our product.
+Thank you for joining our followers. We will be sure to keep you up to date on our product. Click the below link to confirm your email:
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
 
 Brewlitics Team
