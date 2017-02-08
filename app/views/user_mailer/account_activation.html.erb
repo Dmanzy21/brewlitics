@@ -3,12 +3,16 @@
 <p>Hi <%= @user.name %>,</p>
 
 <p>
-Thank you for joining our followers. We will be sure to keep you up to date on our product. Click the below link to confirm your email:
+Thanks for dropping by.  We're thrilled your interested in our <em>brewery software</em>--almost as thrilled as we are to be putting the finishing touches and rolling out our platform sometime in April.  If you're interested in starting with us as an early adopter, feel free to ping me at my email below. If you're not that interested, don't worry, we'll shoot you an update from time to time and let you know when Brewlitics is up and running.  And if you dropped by because you're curious, so are we! Whether it's your favorite beer or an idea about how software can improve your brewing process, we're always eager to connect. <strong style="color: darkblue">Please follow the link below to receive our updates:</strong>
 </p>
 
 <%= link_to "Activate", edit_account_activation_url(@user.activation_token,
                                                     email: @user.email) %>
-
 <p>
-Brewlitics Team
+	Brew Better Beer,
 </p>
+<p>
+	Nick Stager
+	<br>nick@brewlitics.com</br>
+</p>
+

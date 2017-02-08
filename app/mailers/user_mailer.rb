@@ -7,6 +7,11 @@ class UserMailer < ApplicationMailer
   #
   def account_activation(user)
     @user = user
-    mail to: user.email, subject: "Brewlitcs Confirmation"
+    mail to: user.email, subject: "Welcome to Brewlitics"
+  end
+
+  def product_update(user)
+    @user = user
+    mail to: user.email, subject: "Update Email"
   end
 end

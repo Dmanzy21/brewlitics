@@ -26,6 +26,10 @@ class User < ApplicationRecord
     UserMailer.account_activation(self).deliver_now
   end
 
+  def send_update_email
+    UserMailer.product_update(self).deliver_now
+  end
+
   def authenticated?(attribute, token)
     digest = send("#{attribute}_digest")
     return false if digest.nil?
@@ -34,6 +38,11 @@ class User < ApplicationRecord
 
   def activate
     update_attribute(:activated,    true)
+    update_attribute(:activated_at, Time.zone.now)
+  end
+
+  def deactivate
+    update_attribute(:activated,    false)
     update_attribute(:activated_at, Time.zone.now)
   end
 
