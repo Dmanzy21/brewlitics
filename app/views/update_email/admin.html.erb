@@ -2,13 +2,17 @@
 <div class="center">
 	<h1>Admin</h1>
 
-	<%= form_for(:params) do |f| %>
+	<%= form_for(:updateEmail) do |f| %>
 		<%= f.label :subject %>
 		<%= f.text_field :subject, class: 'form-control subject' %>
 
 	  <%= f.label :message %>
-	  <%= f.text_field :message, class: 'form-control' %>
+	  <%= f.text_area :message, class: 'form-control' %>
+
+	  <%= f.label :password %>
+	  <%= f.text_field :password, class: 'form-control subject'%>
 	  
 	  <%= f.submit "Send Email!", class: "btn btn-success", style: "width: 10%" %>
 	<% end %>
+
 </div>

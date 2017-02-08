@@ -10,8 +10,10 @@ class UserMailer < ApplicationMailer
     mail to: user.email, subject: "Welcome to Brewlitics"
   end
 
-  def product_update(user)
+  def product_update(user,params)
     @user = user
-    mail to: user.email, subject: "Update Email"
+    @subject = params[:updateEmail][:subject]
+    @message = params[:updateEmail][:message]
+    mail to: user.email, subject: "#{@subject}"
   end
 end

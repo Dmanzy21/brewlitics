@@ -26,8 +26,8 @@ class User < ApplicationRecord
     UserMailer.account_activation(self).deliver_now
   end
 
-  def send_update_email
-    UserMailer.product_update(self).deliver_now
+  def send_update_email(params)
+    UserMailer.product_update(self,params).deliver_now
   end
 
   def authenticated?(attribute, token)
