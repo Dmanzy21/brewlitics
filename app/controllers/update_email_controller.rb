@@ -15,7 +15,7 @@ class UpdateEmailController < ApplicationController
 	    flash[:info] = "Update sent."
 	    redirect_to root_url
 		else
-			flash[:warning] = "#{@password}"
+			flash[:warning] = "Incorrect Password"
 			redirect_to root_url
 		end
 	end

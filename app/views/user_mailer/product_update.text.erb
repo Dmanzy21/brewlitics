@@ -8,4 +8,4 @@ Nick Stager
 nick@brewlitics.com
 
 
-<%= edit_unsubscribe_url(email: @user.email, id: @user.id) %>
+<%= link_to "Unsubscribe", edit_unsubscribe_url(email: @user.email, id: @user.id) %>
